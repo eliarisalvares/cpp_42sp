@@ -6,7 +6,7 @@
 #    By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/10 13:37:09 by elraira-          #+#    #+#              #
-#    Updated: 2022/12/10 13:48:02 by elraira-         ###   ########.fr        #
+#    Updated: 2022/12/10 14:09:46 by elraira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ OBJS		=	$(SRCS:%.cpp=%.o)
 
 all:		$(NAME)
 
+# add folder prefix to object files and compile
 $(NAME):	$(addprefix $(OBJ_PATH), $(OBJS))
 	$(CC) $(CFLAGS) -o $(NAME) $(addprefix $(OBJ_PATH), $(OBJS))
 
