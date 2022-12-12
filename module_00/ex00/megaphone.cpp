@@ -6,12 +6,20 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 14:12:49 by elraira-          #+#    #+#             */
-/*   Updated: 2022/12/10 14:18:14 by elraira-         ###   ########.fr       */
+/*   Updated: 2022/12/12 11:56:44 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
+/**
+ * @brief Main function. Prints the arguments, if there are any, in uppercase
+ * using std::cout (prints in the standard output);
+ *
+ * @param argc number of arguments
+ * @param argv array of arguments
+ * @return int 0 upon success
+ */
 int	main(int argc, char **argv)
 {
 	int i = 1;
