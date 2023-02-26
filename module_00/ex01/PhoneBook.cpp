@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
+/*   Updated: 2023/02/16 11:58:13 by elraira-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
 
 int PhoneBook::_totalContacts = 0;
@@ -13,7 +25,7 @@ PhoneBook::~PhoneBook()
 
 /**
  * @brief add a new contact to the phonebook.
- * 
+ *
  * @param contact The contact to be added.
  */
 void PhoneBook::_add(Contact* contact)
@@ -23,7 +35,7 @@ void PhoneBook::_add(Contact* contact)
         _totalContacts++;
     }
     else {
-        std::cout << RED << "Phonebook is full, first contact will be replaced" 
+        std::cout << RED << "Phonebook is full, first contact will be replaced"
             << RESET << std::endl;
         this->_contacts[0] = *contact;
     }

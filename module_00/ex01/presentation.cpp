@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   presentation.cpp                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
+/*   Updated: 2023/02/16 11:59:49 by elraira-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
 
 /**
@@ -14,7 +26,7 @@ void PhoneBook::welcomeMessage(void)
 }
 
 /**
- * @brief prints the tabe displayed when user searches for a contact.
+ * @brief prints the table displayed when user searches for a contact.
  * The table contains the first 10 characters of the contact's first name,
  * last name and nickname.
  * @param index The index of the contact in the phonebook.
@@ -45,9 +57,9 @@ void PhoneBook::printContactInfo(Contact info)
 }
 
 /**
- * @brief Gets the contact info from the user and sets it to the contact by
+ * @brief Gets the contact's info from the user and sets it to the contact by
  * calling the setValue method.
- * 
+ *
  * @param field The field of the contact to be set.
  * @param info The contact in which the field will be set.
  */
@@ -72,9 +84,9 @@ void PhoneBook::getIndex()
 {
     int index;
     std::string buffer;
-    
+
     while (1) {
-        std::cout << PURPLE << "Now enter the index of the contact you want to display"
+        std::cout << PURPLE << "Enter the id of the contact you want to see!"
            << RESET << std::endl;
         std::getline(std::cin, buffer);
         if (buffer.empty()) {

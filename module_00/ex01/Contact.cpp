@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
+/*   Updated: 2023/02/16 11:58:02 by elraira-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.hpp"
 
 /* CONSTRUCTOR / DESTRUCTOR */
@@ -12,7 +24,7 @@ Contact::~Contact()
 /**
  * @brief The getter for the Contact class. Will return the value of each field
  * with the contact information.
- * 
+ *
  * @param field The name of the field to get the value from.
  * @return std::string The value of the field. Empty string if the field does not exist.
  */
@@ -34,7 +46,7 @@ std::string Contact::getValue(std::string field) const
 /**
  * @brief The setter for the Contact class. Will set the value of each field
  * with the contact information.
- * 
+ *
  * @param field The name of the field to set the value to.
  * @param field The value to be set.
  */
