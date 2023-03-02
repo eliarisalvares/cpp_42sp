@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 13:49:00 by elraira-          #+#    #+#             */
-/*   Updated: 2023/02/26 14:19:29 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 22:44:04 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,21 @@
  * @return int 0 if everything went well.
  */
 
-int main(void)
-{
-	std::cout << "Creating zombie Elga on heap..." << std::endl;
-	Zombie* elga = newZombie("Elga");
-	elga->announce();
-	delete elga;
+int main(void) {
+    std::cout << "Creating zombie Elga on heap..." << std::endl;
+    Zombie* elga = newZombie("Elga");
+    elga->announce();
+    delete elga;
 
-	std::cout << "Creating zombie Marcel on stack..." << std::endl;
-	randomChump("Marcel");
+    std::cout << "Creating zombie Marcel on stack..." << std::endl;
+    randomChump("Marcel");
 
-	std::cout << "Creating zombie Jorge on stack using constructor..." << std::endl;
-	Zombie jorge = Zombie("Jorge");
-	jorge.announce();
+    std::cout << "Creating zombie Jorge on stack using constructor..."
+        << std::endl;
+    Zombie jorge = Zombie("Jorge");
+    jorge.announce();
 
-	return (0);
+    return (0);
 }
 
 

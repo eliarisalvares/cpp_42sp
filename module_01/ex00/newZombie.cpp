@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 13:46:03 by elraira-          #+#    #+#             */
-/*   Updated: 2023/02/26 13:48:25 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 22:45:07 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@
  * @param name The name of the zombie.
  * @return Zombie* A pointer to the new zombie.
  */
-Zombie* newZombie(std::string name)
-{
-	Zombie* zombie = new Zombie(name);
-	return (zombie);
+Zombie* newZombie(std::string name) {
+    Zombie* zombie = new Zombie(name);
+    return (zombie);
 }
 
