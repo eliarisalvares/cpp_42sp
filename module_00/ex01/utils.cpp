@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/02/16 11:58:34 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 21:17:40 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
  * @param str The string to be truncated.
  * @return std::string The truncated string.
  */
-std::string PhoneBook::_truncateString(std::string str)
-{
+std::string PhoneBook::_truncateString(std::string str) {
     std::string result = str;
     if (str.length() > 10)
         return result.substr(0, 9) + ".";

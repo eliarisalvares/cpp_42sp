@@ -6,19 +6,19 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/02/16 11:58:02 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 21:12:39 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 /* CONSTRUCTOR / DESTRUCTOR */
-Contact::Contact()
-{
+Contact::Contact() {
+    return;
 }
 
-Contact::~Contact()
-{
+Contact::~Contact() {
+    return;
 }
 
 /**
@@ -28,8 +28,7 @@ Contact::~Contact()
  * @param field The name of the field to get the value from.
  * @return std::string The value of the field. Empty string if the field does not exist.
  */
-std::string Contact::getValue(std::string field) const
-{
+std::string Contact::getValue(std::string field) const {
     if (field == "firstName")
         return this->_firstName;
     else if (field == "lastName")
@@ -50,8 +49,7 @@ std::string Contact::getValue(std::string field) const
  * @param field The name of the field to set the value to.
  * @param field The value to be set.
  */
-void Contact::setValue(std::string field, std::string& info)
-{
+void Contact::setValue(std::string field, const std::string& info) {
     if (field == "First name")
         this->_firstName = info;
     else if (field == "Last name")

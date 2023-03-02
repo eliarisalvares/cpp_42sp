@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/02/16 11:58:13 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 21:13:07 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 int PhoneBook::_totalContacts = 0;
 
 /* CONSTRUCTOR AND DESTRUCTOR */
-PhoneBook::PhoneBook()
-{
+PhoneBook::PhoneBook() {
+    return;
 }
 
-PhoneBook::~PhoneBook()
-{
+PhoneBook::~PhoneBook() {
+    return;
 }
 
 /**
@@ -28,13 +28,11 @@ PhoneBook::~PhoneBook()
  *
  * @param contact The contact to be added.
  */
-void PhoneBook::_add(Contact* contact)
-{
+void PhoneBook::_add(Contact* contact) {
     if (PhoneBook::_totalContacts < 8) {
         this->_contacts[PhoneBook::_totalContacts] = *contact;
         _totalContacts++;
-    }
-    else {
+    } else {
         std::cout << RED << "Phonebook is full, first contact will be replaced"
             << RESET << std::endl;
         this->_contacts[0] = *contact;
@@ -42,11 +40,10 @@ void PhoneBook::_add(Contact* contact)
 }
 
 /**
- * @brief Gets the contact info from the user and adds it to the phonebook by calling
- * the _add method.
+ * @brief Gets the contact info from the user and adds it to the phonebook by
+ * calling the _add method.
  */
-void PhoneBook::addContactInfo()
-{
+void PhoneBook::addContactInfo() {
     Contact contact;
 
     _getInfo("First name", contact);
@@ -60,8 +57,7 @@ void PhoneBook::addContactInfo()
 /**
  * @brief Gets the index of the contact to be displayed and prints it.
  */
-void PhoneBook::searchContact()
-{
+void PhoneBook::searchContact() {
     int i = 0;
     if (PhoneBook::_totalContacts == 0) {
         std::cout << RED << "Still no contacts to search" << RESET << std::endl;
@@ -83,8 +79,7 @@ void PhoneBook::searchContact()
 }
 
 
-void PhoneBook::start(void)
-{
+void PhoneBook::start(void) {
     std::string command;
 
     welcomeMessage();
@@ -100,6 +95,7 @@ void PhoneBook::start(void)
         else if (command == "SEARCH")
             searchContact();
         else
-            std::cout << PURPLE << "I'm sorry, I don't understand this command" << RESET << std::endl;
+            std::cout << PURPLE << "I'm sorry, I don't understand this command"
+                << RESET << std::endl;
     }
 }

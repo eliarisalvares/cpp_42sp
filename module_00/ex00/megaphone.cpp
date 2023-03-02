@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 14:12:49 by elraira-          #+#    #+#             */
-/*   Updated: 2022/12/12 11:56:44 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 20:50:11 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,18 @@
  * @param argv array of arguments
  * @return int 0 upon success
  */
-int	main(int argc, char **argv)
-{
-	int i = 1;
-	if (argc ==1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (0);
-	}
-	while (i < argc)
-	{
-		while (*argv[i])
-		{
-			*argv[i] = toupper(*argv[i]);
-			std::cout << *argv[i];
-			argv[i]++;
-		}
-		i++;
-	}
-	std::cout << std::endl;
+int main(int argc, char **argv) {
+    int i = 1;
+    if (argc ==1) {
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+        return (0);
+    } while (i < argc) {
+        while (*argv[i]) {
+            *argv[i] = toupper(*argv[i]);
+            std::cout << *argv[i];
+            argv[i]++;
+        }
+        i++;
+    }
+    std::cout << std::endl;
 }

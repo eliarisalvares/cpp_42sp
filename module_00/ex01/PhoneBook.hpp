@@ -6,20 +6,19 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/02/16 11:58:26 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 21:14:13 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
-
-#include "Contact.hpp"
+#ifndef MODULE_00_EX01_PHONEBOOK_HPP_
+#define MODULE_00_EX01_PHONEBOOK_HPP_
 
 /* C++ LIBRARIES */
-#include <iomanip> // std::setw (for table)
-#include <iostream> // std::cout
-#include <stdlib.h> // atoi
-#include <string> // std::string
+#include <stdlib.h> /* atoi */
+#include <iomanip> /* std::setw (for table) */
+#include <iostream> /* std::cout */
+#include <string> /* std::string */
+#include "Contact.hpp"
 
 /* ANSI COLOR CODES */
 #define RESET "\033[0m"
@@ -31,23 +30,23 @@
 
 /* PHONEBOOK CLASS */
 class PhoneBook {
-public:
-    PhoneBook(); // constructor
-    ~PhoneBook(); // destructor
-    void addContactInfo(); // add contact to phonebook
-    void searchContact(); // search contact in phonebook
-    void welcomeMessage(); // displays welcome message to user
-    void start(); // starts program
-    void printContactInfo(Contact info); // prints contact info to console
+ public:
+    PhoneBook();
+    ~PhoneBook();
+    void addContactInfo();
+    void searchContact();
+    void welcomeMessage();
+    void start();
+    void printContactInfo(Contact info);
     void getIndex();
 
-private:
-    Contact _contacts[8]; // array of contacts: accepts 8 contacts according to subject
-    static int _totalContacts; // total contacts in phonebook at the moment
-    void _add(Contact* contact); // adds contact to phonebook
-    void _getInfo(std::string field, Contact& info); // gets info from user
-    std::string _truncateString(std::string str); // truncates string to 10 characters
-    void _printSearchTableInfo(int index, Contact contact); // prints contact info to console
+ private:
+    Contact _contacts[8];
+    static int _totalContacts;
+    void _add(Contact* contact);
+    void _getInfo(std::string field, Contact& info);
+    std::string _truncateString(std::string str);
+    void _printSearchTableInfo(int index, Contact contact);
 };
 
-#endif
+#endif  // MODULE_00_EX01_PHONEBOOK_HPP_
