@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 20:06:24 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:17:10 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 23:22:55 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,4 @@ class Harl {
     void _error(void);
 };
 
-#endif  // MODULE_01_EX05_HARL_HPP
+#endif  /* MODULE_01_EX05_HARL_HPP */

@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:41:03 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:06:22 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 23:22:13 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,4 @@ class HumanB {
     Weapon* _weapon;
 };
 
-#endif  // MODULE_01_EX03_HUMANB_HPP_
+#endif  /* MODULE_01_EX03_HUMANB_HPP_ */

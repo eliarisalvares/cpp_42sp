@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 13:40:40 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 22:51:40 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 23:21:52 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,4 @@ class Zombie {
 Zombie* newZombie(std::string name);
 void randomChump(std::string name);
 
-#endif  // MODULE_01_EX00_ZOMBIE_HPP_
+#endif  /* MODULE_01_EX00_ZOMBIE_HPP_ */

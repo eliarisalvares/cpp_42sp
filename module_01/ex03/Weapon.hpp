@@ -26,4 +26,4 @@ class Weapon {
     std::string _type;
 };
 
-#endif  // MODULE_01_EX03_WEAPON_HPP_
+#endif  /* MODULE_01_EX03_WEAPON_HPP_ */

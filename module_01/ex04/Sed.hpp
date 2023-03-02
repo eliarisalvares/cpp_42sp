@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:57:41 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:13:29 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 23:22:41 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,4 @@ class Sed {
     std::string _addExtension(std::string fileName);
 };
 
-#endif  // MODULE_01_EX04_SED_HPP_
+#endif  /* MODULE_01_EX04_SED_HPP_ */
