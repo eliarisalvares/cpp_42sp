@@ -6,25 +6,25 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:37:28 by elraira-          #+#    #+#             */
-/*   Updated: 2023/02/26 17:38:03 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 23:03:33 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#ifndef MODULE_01_EX03_HUMANA_HPP_
+# define MODULE_01_EX03_HUMANA_HPP_
 
 # include <iostream> /* cout, endl */
+# include <string> /* string */
 # include "Weapon.hpp"
 
-class HumanA
-{
-	public:
-		HumanA(std::string name, Weapon& weapon);
-		~HumanA(void);
-		void	attack(void);
-	private:
-		std::string	_name;
-		Weapon&		_weapon;
+class HumanA {
+ public:
+    HumanA(std::string name, Weapon& weapon);
+    ~HumanA(void);
+    void attack(void);
+ private:
+    std::string _name;
+    Weapon& _weapon;
 };
 
-#endif
+#endif  // MODULE_01_EX03_HUMANA_HPP_

@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:30:28 by elraira-          #+#    #+#             */
-/*   Updated: 2023/02/26 17:33:33 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 23:08:08 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,16 @@
  *
  * @param type The type of the weapon.
  */
-Weapon::Weapon(std::string type): _type(type)
-{
+Weapon::Weapon(std::string type): _type(type) {
+    return;
 }
 
 /**
  * @brief Destroy the Weapon:: Weapon object.
  *
  */
-Weapon::~Weapon(void)
-{
-	return ;
+Weapon::~Weapon(void) {
+    return;
 }
 
 /**
@@ -35,9 +34,8 @@ Weapon::~Weapon(void)
  *
  * @return const std::string& The type of the weapon.
  */
-const std::string& Weapon::getType(void)
-{
-	return (this->_type);
+const std::string& Weapon::getType(void) {
+    return (this->_type);
 }
 
 /**
@@ -45,7 +43,6 @@ const std::string& Weapon::getType(void)
  *
  * @param type The type of the weapon.
  */
-void Weapon::setType(std::string type)
-{
-	this->_type = type;
+void Weapon::setType(std::string type) {
+    this->_type = type;
 }

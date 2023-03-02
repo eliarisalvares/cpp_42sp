@@ -6,12 +6,12 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 20:06:24 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 20:24:53 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 23:17:10 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#ifndef MODULE_01_EX05_HARL_HPP
+# define MODULE_01_EX05_HARL_HPP
 
 # include <iostream> /* cout, endl */
 # include <string> /* string */
@@ -25,16 +25,16 @@
 # define RESET "\033[0m"
 
 class Harl {
-	public:
-		Harl();
-		~Harl();
-		void complain(std::string level);
+ public:
+    Harl();
+    ~Harl();
+    void complain(std::string level);
 
-	private:
-		void _debug(void);
-		void _info(void);
-		void _warning(void);
-		void _error(void);
+ private:
+    void _debug(void);
+    void _info(void);
+    void _warning(void);
+    void _error(void);
 };
 
-#endif
+#endif  // MODULE_01_EX05_HARL_HPP
