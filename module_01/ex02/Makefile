@@ -6,7 +6,7 @@
 #    By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/26 17:11:43 by elraira-          #+#    #+#              #
-#    Updated: 2023/02/26 17:13:39 by elraira-         ###   ########.fr        #
+#    Updated: 2023/02/26 17:43:35 by elraira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,3 +50,7 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+# phony avoids conflicts with files named clean, fclean, re, etc.
+.PHONY: all clean fclean re
+

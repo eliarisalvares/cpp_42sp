@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:02:48 by elraira-          #+#    #+#             */
-/*   Updated: 2023/02/26 17:25:09 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 23:00:49 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,27 +29,26 @@
  * storage space.
  *
  */
-int	main(void)
-{
-	std::string str = "HI THIS IS BRAIN";
-	std::string* stringPTR = &str;
-	std::string& stringREF = str;
+int	main(void) {
+    std::string str = "HI THIS IS BRAIN";
+    std::string* stringPTR = &str;
+    std::string& stringREF = str;
 
-	std::cout << "Addresses:" << std::endl;
-	std::cout << "The address of strPTR is: " << &stringPTR << std::endl;
-	std::cout << "The address of str is: " << &str << std::endl;
-	std::cout << "The address of stringREF is: " << &stringREF << std::endl;
-	std::cout << std::endl;
-	std::cout << "Addresses held:" << std::endl;
-	std::cout << "The address held by stringPTR: " << stringPTR << std::endl;
-	std::cout << "The address held by stringREF: " << &stringREF << std::endl;
-	std::cout << std::endl;
-	std::cout << "Values:" << std::endl;
-	std::cout << "The value of stringPTR is: " << stringPTR << std::endl;
-	std::cout << "The value of stringREF is: " << stringREF << std::endl;
-	std::cout << std::endl;
-	std::cout << "Values pointed:" << std::endl;
-	std::cout << "Value pointed to by stringPTR: " << *stringPTR << std::endl;
-	std::cout << "Value referenced by stringREF: " << stringREF << std::endl;
-	return (0);
+    std::cout << "Addresses:" << std::endl;
+    std::cout << "The address of strPTR is: " << &stringPTR << std::endl;
+    std::cout << "The address of str is: " << &str << std::endl;
+    std::cout << "The address of stringREF is: " << &stringREF << std::endl;
+    std::cout << std::endl;
+    std::cout << "Addresses held:" << std::endl;
+    std::cout << "The address held by stringPTR: " << stringPTR << std::endl;
+    std::cout << "The address held by stringREF: " << &stringREF << std::endl;
+    std::cout << std::endl;
+    std::cout << "Values:" << std::endl;
+    std::cout << "The value of stringPTR is: " << stringPTR << std::endl;
+    std::cout << "The value of stringREF is: " << stringREF << std::endl;
+    std::cout << std::endl;
+    std::cout << "Values pointed:" << std::endl;
+    std::cout << "Value pointed to by stringPTR: " << *stringPTR << std::endl;
+    std::cout << "Value referenced by stringREF: " << stringREF << std::endl;
+    return (0);
 }
