@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 20:58:21 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/01 23:21:30 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,4 @@ class Contact {
     std::string _darkestSecret;
 };
 
-#endif  // MODULE_00_EX01_CONTACT_HPP_
+#endif  /* MODULE_00_EX01_CONTACT_HPP_ */
