@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 19:50:55 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/04 19:57:40 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/05 14:01:49 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,15 @@ class Fixed {
     Fixed(Fixed const& src); /* copy constructor */
     ~Fixed(); /* destructor */
 
-    Fixed& operator=(Fixed const& rhs); // assignment operator, which assign
-    // values between two instances of the same class
+    Fixed& operator=(Fixed const& rhs); /* assignment operator, which assign
+    values between two instances of the same class */
     int getRawBits(void) const;
     void setRawBits(int const raw);
 
  private:
-    int _value;
-    static const int _fractionalBits = 8;
+    int _value; /* the value of the fixed point number */
+    static const int _fractionalBits = 8; /* the number of fractional bits. It
+    will always be 8 */
 };
 
 #endif  /* MODULE_02_EX00_FIXED_HPP_ */
