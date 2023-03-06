@@ -43,8 +43,23 @@ fazer operações com números de ponto fixo.
 
 A desvantagem é que, como os números de ponto fixo são representados por
 inteiros, eles não podem representar números fracionários com tanta precisão
-quanto os números de ponto flutuante. Por exemplo, um número de ponto fixo
-pode representar 0.5, mas não pode representar 0.3333333333333333333333333333.
+quanto os números de ponto flutuante.
+
+##### Relação entre números de ponto fixo e binários
+
+Em um octeto (8 bits), podemos representar números de ponto fixo com 4 bits
+para a parte inteira e 4 bits para a parte fracionária. Isso significa que
+podemos representar números de ponto fixo com precisão de 1/16. Por exemplo:
+
+```
+7.5 = 0111.1000
+
+2.1 = 0010.0010
+````
+
+*A posição do ponto fixo em um número de ponto fixo depende do número de bits
+usados para representar a parte inteira e a parte fracionária, assim como a
+faixa de valores que o número pode assumir.*
 
 #### Overload: Sobrecarga de operadores e funções.
 
