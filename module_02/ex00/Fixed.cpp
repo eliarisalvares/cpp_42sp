@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 19:55:04 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/04 20:07:04 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/03/05 15:35:28 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,7 @@ Fixed& Fixed::operator=(Fixed const& fixed) {
 
 /**
  * @brief Get the Raw Bits object from the private attribute _value of the
- * instance of the class Fixed. Raw bits are the bits that are not interpreted
- * by the computer.
+ * instance of the class Fixed.
  *
  * @return int const: the raw bits
  */
