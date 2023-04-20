@@ -14,6 +14,45 @@ através de 9 listas de exercícios (módulos).
 
 ### Conceitos Importantes de C++ (por ordem de aparição nas listas (módulos))
 
+### Módulo 00
+
+#### Namespace: Espaço de nomes.
+
+Um namespace é um escopo que contém um conjunto de nomes. Os nomes de um
+namespace são únicos, ou seja, não podem haver dois nomes iguais em um mesmo
+namespace.
+
+Um namespace pode ser definido em um arquivo de cabeçalho (.hpp) e pode ser
+importado em outros arquivos de cabeçalho (.hpp) ou arquivos de código fonte
+(.cpp) usando a diretiva de pré-processador "include".
+
+```cpp
+#include "namespace.hpp"
+```
+
+#### Class: Classe.
+
+Uma classe é um tipo de dados definido pelo usuário que contém dados e
+funções. Uma classe é uma abstração de um objeto do mundo real.
+
+#### Member: Membro ou Attribute (atributo).
+
+Um membro é uma variável ou função que pertence a uma classe. Um membro pode
+ser acessado usando o operador de acesso ao membro ".".
+
+#### Private: Privado e Public: Público.
+
+Os membros de uma classe podem ser declarados como públicos ou privados. Um
+membro declarado como privado só pode ser acessado por outros membros da mesma
+classe. Um membro declarado como público pode ser acessado por qualquer outro
+código.
+
+Para acessar atributos privados de uma classe, é necessário criar métodos
+públicos que façam a leitura e a escrita desses atributos (getters e setters).
+
+Um getter é um método que retorna o valor de um atributo privado. Um setter é
+um método que recebe um valor e atribui esse valor a um atributo privado.
+
 ### Módulo 02
 
 #### RawBits: Bits brutos.
@@ -79,8 +118,7 @@ executada com base no número, tipos e ordem dos argumentos passados.
 A sobrecarga de funções é uma técnica poderosa em C++ que permite escrever
 código mais legível e fácil de usar, tornando a linguagem mais expressiva e
 flexível.
-
-### Assignment Operator: Operador de atribuição.
+#### Assignment Operator: Operador de atribuição.
 
 O operador de atribuição (=) é usado para atribuir um valor a uma variável.
 
