@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 14:12:49 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 20:50:11 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/04/20 13:57:09 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,19 @@ int main(int argc, char **argv) {
         return (0);
     } while (i < argc) {
         while (*argv[i]) {
+            if (*argv[i] == '"') {
+                argv[i]++;
+                while (*argv[i] != '"') {
+                    *argv[i] = toupper(*argv[i]);
+                    std::cout << *argv[i];
+                    argv[i]++;
+                }
+            }
             *argv[i] = toupper(*argv[i]);
             std::cout << *argv[i];
             argv[i]++;
         }
+        std::cout << " ";
         i++;
     }
     std::cout << std::endl;
