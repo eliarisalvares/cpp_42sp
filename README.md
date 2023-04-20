@@ -16,7 +16,7 @@ através de 9 listas de exercícios (módulos).
 
 ### Módulo 00
 
-#### Namespace: Espaço de nomes.
+#### Namespace
 
 Um namespace é um escopo que contém um conjunto de nomes. Os nomes de um
 namespace são únicos, ou seja, não podem haver dois nomes iguais em um mesmo
