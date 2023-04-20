@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 21:17:40 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/04/20 14:11:32 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 /**
  * @brief An auxiliary function to truncate a string to 10 characters.
+ * The subject status that the columns should have a maximum of 10 characters.
  *
  * @param str The string to be truncated.
  * @return std::string The truncated string.

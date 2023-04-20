@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 21:12:39 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/04/20 11:10:19 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ Contact::~Contact() {
  * with the contact information.
  *
  * @param field The name of the field to get the value from.
- * @return std::string The value of the field. Empty string if the field does not exist.
+ * @return std::string The value of the field. Empty string if the field does
+ * not exist.
  */
 std::string Contact::getValue(std::string field) const {
     if (field == "firstName")

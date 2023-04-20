@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 22:41:07 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/04/20 14:11:05 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void PhoneBook::welcomeMessage(void) {
     std::cout << std::endl;
     std::cout << CYAN << "Welcome to the PhoneBook!" << RESET << std::endl;
     std::cout << BOLD_WHITE << "You can use the following"
-        << "commands to navigate your phonebook:" << std::endl;
+        << " commands to navigate your phonebook:" << std::endl;
     std::cout << PURPLE << "ADD - add a new contact" << std::endl;
     std::cout << "SEARCH - search for a contact" << std::endl;
     std::cout << "EXIT - exit the program" << RESET << std::endl;

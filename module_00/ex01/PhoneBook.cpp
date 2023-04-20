@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 21:13:07 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/04/20 11:09:38 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void PhoneBook::searchContact() {
         std::cout << RED << "Still no contacts to search" << RESET << std::endl;
         return;
     }
-
     std::cout << std::endl;
     std::cout << std::setw(10) << "Index" << "|";
     std::cout << std::setw(10) << "First name" << "|";

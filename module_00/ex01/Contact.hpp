@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:54:09 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:21:30 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/04/20 11:11:01 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 #include <iostream> /* std::cout */
 #include <string> /* std::string */
+
+/* according to the subject, the contact class must hav private attributes
+firstName, _lastName, _nickname, _phoneNumber and _darkestSecret and the
+anything that will be used must be used inside the class and not outside of
+it. So, the class must have a public method to get the value of the private
+attributes and a public method to set the value of the private attributes. */
 
 /* CONTACT CLASS */
 class Contact {
