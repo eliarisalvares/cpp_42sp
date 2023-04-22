@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 16:00:42 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 22:54:40 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/04/21 22:49:31 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int Zombie::zombieCount = 0;
  */
 Zombie::Zombie(void) {
     Zombie::zombieCount++;
-    std::cout << Zombie::zombieCount
-        << ": Zombie" << this->_name << " was born!" << std::endl;
+    std::cout << "Zombie " << Zombie::zombieCount - 1
+        << " was born!" << std::endl;
     return;
 }
 
@@ -29,8 +29,8 @@ Zombie::Zombie(void) {
  */
 Zombie::~Zombie(void) {
     Zombie::zombieCount--;
-    std::cout << Zombie::zombieCount
-        << ": Zombie " << this->_name << " died!" << std::endl;
+    std::cout << "Clicker, zombie " << Zombie::zombieCount
+        << " was killed!" << std::endl;
     return;
 }
 

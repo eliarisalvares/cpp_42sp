@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 16:03:52 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:22:04 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/04/21 22:43:22 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <iostream> /* cout, endl */
 # include <string> /* string */
+
+/* ANSI COLOR CODES */
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
 
 class Zombie {
  public:
