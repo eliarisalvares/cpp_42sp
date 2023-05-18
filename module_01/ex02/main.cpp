@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:02:48 by elraira-          #+#    #+#             */
-/*   Updated: 2023/05/17 20:26:39 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/05/17 21:55:28 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string> /* string */
 /* ANSI COLOR CODES */
 #define RESET "\033[0m"
-#define GREEN "\033[32m"
+#define PURPLE "\e[0;35m"
 
 /**
  * @brief This exercise is about references and pointers. A stringPTR and a
@@ -32,24 +32,24 @@
  * storage space.
  *
  */
-int	main(void) {
+int main(void) {
     std::string str = "HI THIS IS BRAIN";
     std::string* stringPTR = &str;
     std::string& stringREF = str;
 
-    std::cout << GREEN << "Addresses:" << RESET << std::endl;
+    std::cout << PURPLE << "Addresses:" << RESET << std::endl;
     std::cout << "The address of strPTR is: " << &stringPTR << std::endl;
     std::cout << "The address of str is: " << &str << std::endl;
     std::cout << "The address of stringREF is: " << &stringREF << std::endl;
     std::cout << std::endl;
-    std::cout << GREEN << "Address held:" << RESET << std::endl;
+    std::cout << PURPLE << "Address held:" << RESET << std::endl;
     std::cout << "The address held by stringPTR: " << stringPTR << std::endl;
     std::cout << std::endl;
-    std::cout << GREEN << "Values:" << RESET << std::endl;
+    std::cout << PURPLE << "Values:" << RESET << std::endl;
     std::cout << "The value of stringPTR is: " << stringPTR << std::endl;
     std::cout << "The value of stringREF is: " << stringREF << std::endl;
     std::cout << std::endl;
-    std::cout << GREEN << "Values pointed to/referenced:" << RESET << std::endl;
+    std::cout << PURPLE << "Values pointed to/referenced:" << RESET << std::endl;
     std::cout << "Value pointed to by stringPTR: " << *stringPTR << std::endl;
     std::cout << "Value referenced by stringREF: " << stringREF << std::endl;
     return (0);

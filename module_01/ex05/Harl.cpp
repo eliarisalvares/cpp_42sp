@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 20:07:33 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 20:44:11 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/05/17 21:44:20 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ Harl::~Harl() {
 void Harl::complain(std::string level) {
     int i = 0;
 
+    /* Each element of the complain array is a pointer to a member function
+     * of the Harl class. */
     void (Harl::*complain[4])(void) = {
         &Harl::_debug,
         &Harl::_info,
