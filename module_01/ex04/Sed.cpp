@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:53:26 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:15:12 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/05/17 21:20:09 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,12 @@ Sed::~Sed(void) {
     return;
 }
 
+/**
+ * @brief Read the content of the file and store it in a string.
+ *
+ * @return int 0 if the file was read successfully, 1 if the file could not be
+ * opened, 2 if the file is empty.
+ */
 std::string Sed::_replaceContent(std::string s1, std::string s2,
     std::string content) {
     std::string newContent = "";
@@ -49,14 +55,18 @@ std::string Sed::_replaceContent(std::string s1, std::string s2,
 }
 
 void Sed::replace(void) {
-    if (this->_readFromFile() != 0) {
-        std::cerr << "Error: Unable to open file" << std::endl;
+    if (this->_readFromFile() == 1) {
+        std::cerr << RED << "Error: Unable to open file" << RESET << std::endl;
+        exit(1);
+    } else if (this->_readFromFile() == 2) {
+        std::cerr << RED << "Error: File is empty" << RESET << std::endl;
         exit(1);
     }
     std::string newContent =
         this->_replaceContent(this->_s1, this->_s2, this->_content);
     if (this->_writeToFile(newContent) != 0) {
-        std::cerr << "Error: Unable to write to file" << std::endl;
+        std::cerr << RED << "Error: Unable to write to file" << RESET
+        << std::endl;
         exit(1);
     }
 }

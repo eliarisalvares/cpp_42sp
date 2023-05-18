@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:57:41 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:22:41 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/05/17 21:01:11 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 # include <fstream> /* ifstream, ofstream */
 # include <string> /* string */
 # include <sstream> /* stringstream */
+/* ANSI COLOR CODES */
+# define RESET "\033[0m"
+# define RED "\033[31m"
+# define GREEN "\033[32m"
 
 class Sed {
  public:

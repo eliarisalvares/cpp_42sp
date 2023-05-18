@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 19:25:00 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:15:52 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/05/17 21:17:53 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ std::string Sed::_addExtension(std::string fileName) {
 }
 
 /**
- * @brief Write the content to the file.
+ * @brief Write the content to the file using ofstream, which is a class to
+ * write on files.
  *
  * @param content The content to be written to the file.
  * @return int 0 if the file was written successfully, 1 otherwise.
