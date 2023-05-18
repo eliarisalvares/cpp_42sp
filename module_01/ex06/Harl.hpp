@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 23:19:24 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:29:33 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/05/17 21:41:27 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # define YELLOW "\033[0;33m"
 # define BLUE "\033[0;34m"
 # define WHITE "\e[1;37m"
+# define PURPLE "\033[0;35m"
 # define RESET "\033[0m"
 
 class Harl {

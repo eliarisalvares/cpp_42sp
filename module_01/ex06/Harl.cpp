@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 23:19:06 by elraira-          #+#    #+#             */
-/*   Updated: 2023/03/01 23:42:21 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/05/17 21:51:48 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,10 @@ static int getLevel(std::string level) {
     return 4;
 }
 
+/**
+ * @brief Print messages according to the level. Switch case is used to
+ * determine which method to call.
+ */
 int Harl::complain(std::string level) {
     void (Harl::*debug)() = &Harl::_debug;
     void (Harl::*info)() = &Harl::_info;
