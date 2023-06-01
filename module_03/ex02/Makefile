@@ -6,12 +6,12 @@
 #    By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/04 19:49:41 by elraira-          #+#    #+#              #
-#    Updated: 2023/06/01 14:28:17 by elraira-         ###   ########.fr        #
+#    Updated: 2023/06/01 19:15:48 by elraira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #name of the executable
-NAME		=	claptrap
+NAME		=	fragtrap
 
 #compiler and flags to use when compiling the project (C++98)
 CC			=	c++
