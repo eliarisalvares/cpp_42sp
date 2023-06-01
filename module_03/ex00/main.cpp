@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:43:18 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 18:50:54 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 19:00:52 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int main(void) {
 
     std::cout << std::endl;
     ClapTrap smallTrap("Elga");
-    std::cout << BLUE << "Elga Hit Points: " << RESET << smallTrap.getHitPoints()
-        << std::endl;
+    std::cout << BLUE << "Elga Hit Points: " << RESET
+        << smallTrap.getHitPoints() << std::endl;
     std::cout << BLUE << "Elga Energy Points: " << RESET
         << smallTrap.getEnergyPoints() << std::endl;
     std::cout << BLUE << "Elga Attack Damage: " << RESET
@@ -35,8 +35,8 @@ int main(void) {
 
     std::cout << std::endl;
     ClapTrap copyTrap(smallTrap);
-    std::cout << BLUE << "Elga's Copy Hit Points: " << RESET << copyTrap.getHitPoints()
-        << std::endl;
+    std::cout << BLUE << "Elga's Copy Hit Points: " << RESET
+        << copyTrap.getHitPoints() << std::endl;
     std::cout << BLUE << "Elga's Copy Energy Points: " << RESET
         << copyTrap.getEnergyPoints() << std::endl;
     std::cout << BLUE << "Elga's Copy Attack Damage: " << RESET
@@ -78,7 +78,7 @@ int main(void) {
     smallTrap.attack(copyTrap.getName());
     std::cout << std::endl;
 
-	std::cout << BLUE_BACKGROUND << "End of Game" << RESET << std::endl;
+    std::cout << BLUE_BACKGROUND << "End of Game" << RESET << std::endl;
 
     return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:25:27 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 18:51:02 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:53:24 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,5 @@ class ClapTrap {
     int _energyPoints;
     int _attackDamage;
 };
+
 #endif  /* MODULE_03_EX00_CLAPTRAP_HPP_ */

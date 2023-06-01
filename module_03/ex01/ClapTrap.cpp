@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:40:01 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 18:50:31 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 19:03:31 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10),
 
 ClapTrap::ClapTrap(ClapTrap const& src) {
     std::cout << WHITE << "ClapTrap Copy Constructor called"
-	    << RESET << std::endl;
+        << RESET << std::endl;
     *this = src;
 }
 
 ClapTrap::~ClapTrap() {
     std::cout << WHITE << "ClapTrap " << this->_name << " destroyed"
-	    << RESET << std::endl;
+        << RESET << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
@@ -47,7 +47,7 @@ ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
 int ClapTrap::healthCheck(void) {
     if (this->_hitPoints <= 0) {
         std::cout << RED << this->_name << " is dead"
-		    << RESET << std::endl;
+            << RESET << std::endl;
         return (0);
     }
     if (_energyPoints <= 0) {

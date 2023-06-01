@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:40:01 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 18:51:11 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:53:04 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
 int ClapTrap::healthCheck(void) {
     if (this->_hitPoints <= 0) {
         std::cout << RED << this->_name << " is dead"
-		    << RESET << std::endl;
+            << RESET << std::endl;
         return (0);
     }
     if (_energyPoints <= 0) {
