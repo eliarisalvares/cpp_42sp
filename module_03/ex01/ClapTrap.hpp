@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:25:27 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 10:05:41 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 16:34:42 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ class ClapTrap {
 
     int healthCheck(void);
 
- private:
+ protected:
     std::string _name;
     int _hitPoints;
     int _energyPoints;

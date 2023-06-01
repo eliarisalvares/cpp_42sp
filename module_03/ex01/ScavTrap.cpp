@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 22:40:47 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 11:22:02 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 17:00:17 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 ScavTrap::ScavTrap(void): ClapTrap() {
     std::cout << "ScavTrap Default Constructor called" << std::endl;
-    this->setHitPoints(100);
-    this->setEnergyPoints(50);
-    this->setAttackDamage(20);
+    this->_hitPoints = 100;
+    this->_energyPoints = 50;
+    this->_attackDamage = 20;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
-    this->setHitPoints(100);
-    this->setEnergyPoints(50);
-    this->setAttackDamage(20);
-    this->setName(name);
-    std::cout << "ScavTrap Constructor called" << std::endl;
-    std::cout << "ScavTrap " << this->getName() << " created" << std::endl;
+    this->_hitPoints = 100;
+    this->_energyPoints = 50;
+    this->_attackDamage = 20;
+    this->_name = name;
+    std::cout << "ScavTrap " << this->_name << " created" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const& src) {
@@ -34,28 +33,27 @@ ScavTrap::ScavTrap(ScavTrap const& src) {
 }
 
 ScavTrap::~ScavTrap() {
-    std::cout << "ScavTrap Destructor called" << std::endl;
-    std::cout << "ScavTrap " << this->getName() << " destroyed" << std::endl;
+    std::cout << "ScavTrap " << this->_name << " destroyed" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(ScavTrap const& rhs) {
     if (this != &rhs) {
-        this->setName(rhs.getName());
-        this->setHitPoints(rhs.getHitPoints());
-        this->setEnergyPoints(rhs.getEnergyPoints());
-        this->setAttackDamage(rhs.getAttackDamage());
+        this->setName(rhs._name);
+        this->setHitPoints(rhs._hitPoints);
+        this->setEnergyPoints(rhs._energyPoints);
+        this->setAttackDamage(rhs._attackDamage);
     }
     return *this;
 }
 
 void ScavTrap::attack(std::string const& target) {
     if (!this->healthCheck()) {
-        std::cout << RED << "ScavTrap " << this->getName() << " is dead"
+        std::cout << RED << "ScavTrap " << this->_name << " is dead"
             << RESET << std::endl;
         return;
     } else {
-        std::cout << YELLOW << "ScavTrap " << this->getName() << " attacks "
-            << target << " causing " << this->getAttackDamage()
+        std::cout << YELLOW << "ScavTrap " << this->_name << " attacks "
+            << target << " causing " << this->_attackDamage
             << " points of damage!" << RESET << std::endl;
     }
     this->setEnergyPoints(this->getEnergyPoints() - 1);
@@ -63,14 +61,11 @@ void ScavTrap::attack(std::string const& target) {
 
 void ScavTrap::guardGate() {
     if (!this->healthCheck()) {
-        std::cout << RED << "ScavTrap " << this->getName() << " is dead"
+        std::cout << RED << "ScavTrap " << this->_name << " is dead"
             << RESET << std::endl;
         return;
     }
-    std::cout << WHITE << "ScavTrap " << this->getName()
+    std::cout << WHITE << "ScavTrap " << this->_name
         << " has enterred in Gate keeper mode"
         << RESET << std::endl;
 }
-
-
-
