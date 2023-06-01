@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:40:01 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 16:09:14 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:50:31 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,19 @@ ClapTrap::ClapTrap(void): _hitPoints(10), _energyPoints(10), _attackDamage(0) {
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10),
         _energyPoints(10), _attackDamage(0) {
-    std::cout << "ClapTrap Constructor called" << std::endl;
-    std::cout << "ClapTrap " << this->_name << " created" << std::endl;
+    std::cout << WHITE << "ClapTrap " << this->_name << " created"
+        << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const& src) {
-    std::cout << "ClapTrap Copy Constructor called" << std::endl;
+    std::cout << WHITE << "ClapTrap Copy Constructor called"
+	    << RESET << std::endl;
     *this = src;
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << "ClapTrap Destructor called" << std::endl;
-    std::cout << "ClapTrap " << this->_name << " destroyed" << std::endl;
+    std::cout << WHITE << "ClapTrap " << this->_name << " destroyed"
+	    << RESET << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
@@ -45,12 +46,13 @@ ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
 
 int ClapTrap::healthCheck(void) {
     if (this->_hitPoints <= 0) {
-        std::cout << RED << this->_name << " is dead" << std::endl;
+        std::cout << RED << this->_name << " is dead"
+		    << RESET << std::endl;
         return (0);
     }
     if (_energyPoints <= 0) {
         std::cout << RED << this->_name << " is out of energy"
-            << std::endl;
+            << RESET << std::endl;
         return (0);
     }
     return (1);

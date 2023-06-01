@@ -6,33 +6,37 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:40:01 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 16:15:46 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:49:46 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void): _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-    std::cout << "ClapTrap Default Constructor called" << std::endl;
+    std::cout << WHITE << "ClapTrap Default Constructor called"
+		<< RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10),
         _energyPoints(10), _attackDamage(0) {
-    std::cout << "ClapTrap " << this->_name << " created" << std::endl;
+    std::cout << WHITE << "ClapTrap " << this->_name << " created"
+	    << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const& src) {
-    std::cout << "ClapTrap Copy Constructor called" << std::endl;
+    std::cout << WHITE << "ClapTrap Copy Constructor called"
+	    << RESET << std::endl;
     *this = src;
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << "ClapTrap " << this->_name << " destroyed"
-        << std::endl << std::endl;
+    std::cout << WHITE << "ClapTrap " << this->_name << " destroyed"
+        << RESET << std::endl << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
-    std::cout << "ClapTrap Assignation operator called" << std::endl;
+    std::cout << WHITE << "ClapTrap Assignation operator called"
+	    << RESET << std::endl;
     if (this != &rhs) {
         this->_name = rhs._name;
         this->_hitPoints = rhs._hitPoints;

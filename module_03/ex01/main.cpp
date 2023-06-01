@@ -6,14 +6,14 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 10:34:37 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 14:02:19 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:50:14 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 int main(void) {
-    std::cout << BLUE << "Game Start" << std::endl;
+    std::cout << BLUE_BACKGROUND << "Game Start" << RESET << std::endl;
 
     std::cout << std::endl;
     std::cout << "Create Player ClapTrap" << RESET << std::endl;
@@ -53,9 +53,6 @@ int main(void) {
     clapTrap.attack(scavTrap.getName());
 
     std::cout << std::endl;
-    scavTrap.attack(clapTrap.getName());
-
-    std::cout << std::endl;
-    std::cout << BLUE << "End of the game" << RESET << std::endl;
+    std::cout << BLUE_BACKGROUND << "End of the game" << RESET << std::endl;
     return (0);
 }

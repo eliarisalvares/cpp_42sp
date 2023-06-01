@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:21:52 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 17:03:36 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:48:56 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,6 @@ FragTrap& FragTrap::operator=(FragTrap const& rhs) {
 }
 
 void FragTrap::highFivesGuys(void) {
-    std::cout << WHITE << "High five guys! My name is " << this->getName()
+    std::cout << PURPLE << "High five guys! My name is " << this->getName()
         << RESET << std::endl;
 }

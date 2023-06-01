@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 10:34:37 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 14:43:29 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:48:38 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include "FragTrap.hpp"
 
 int main(void) {
-    std::cout << BLUE << "Game Start" << std::endl;
+    std::cout << BLUE_BACKGROUND << "Game Start" << RESET << std::endl;
 
     std::cout << std::endl;
-    std::cout << "Create Player ClapTrap" << RESET << std::endl;
+    std::cout << BLUE << "Create Player ClapTrap" << RESET << std::endl;
     ClapTrap clapTrap("Clappy");
 
     std::cout << std::endl;
@@ -68,6 +68,6 @@ int main(void) {
     fragTrap.highFivesGuys();
 
     std::cout << std::endl;
-    std::cout << BLUE << "End of the game" << RESET << std::endl;
+    std::cout << BLUE_BACKGROUND << "End of the game" << RESET << std::endl;
     return (0);
 }

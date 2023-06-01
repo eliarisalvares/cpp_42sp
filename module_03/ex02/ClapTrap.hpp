@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:25:27 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 17:01:53 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:49:13 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 # define GREEN "\033[0;32m"
 # define YELLOW "\033[0;33m"
 # define BLUE "\033[0;34m"
+# define BLUE_BACKGROUND "\e[44m"
+# define PURPLE "\e[0;35m"
 # define WHITE "\e[1;37m"
 # define RESET "\033[0m"
 

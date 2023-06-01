@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:19:03 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 16:15:09 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:48:47 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,6 @@
 #include <iostream> /* std::cout */
 #include <string> /* std::string */
 #include "ClapTrap.hpp"
-
-/* COLORS */
-# define RED "\033[0;31m"
-# define GREEN "\033[0;32m"
-# define YELLOW "\033[0;33m"
-# define BLUE "\033[0;34m"
-# define WHITE "\e[1;37m"
-# define RESET "\033[0m"
 
 /* FLAGTRAP CLASS */
 class FragTrap : public ClapTrap {

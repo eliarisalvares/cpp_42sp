@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 22:40:47 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 14:51:21 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:48:14 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,7 @@ void ScavTrap::guardGate() {
             << RESET << std::endl;
         return;
     }
-    std::cout << WHITE << "ScavTrap " << this->getName()
+    std::cout << PURPLE << "ScavTrap " << this->getName()
         << " has enterred in Gate keeper mode"
         << RESET << std::endl;
 }
-
-
-

@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 22:41:03 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 16:14:49 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:47:44 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,7 @@
 #include <string> /* std::string */
 #include "ClapTrap.hpp"
 
-/* COLORS */
-# define RED "\033[0;31m"
-# define GREEN "\033[0;32m"
-# define YELLOW "\033[0;33m"
-# define BLUE "\033[0;34m"
-# define WHITE "\e[1;37m"
-# define RESET "\033[0m"
-
 /* SCAVTRAP CLASS */
-
-/* ScavTrap inherits from ClapTrap which means that it will have all the
- * attributes and methods of the ClapTrap class. The ScavTrap is, then, a
- * derived class of the ClapTrap class. */
 class ScavTrap : public ClapTrap {
  public:
     ScavTrap();
