@@ -6,16 +6,16 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 22:41:03 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 14:16:37 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 16:14:49 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MODULE_03_EX02_SCAVTRAP_HPP_
 #define MODULE_03_EX02_SCAVTRAP_HPP_
 
-#include "ClapTrap.hpp"
 #include <iostream> /* std::cout */
 #include <string> /* std::string */
+#include "ClapTrap.hpp"
 
 /* COLORS */
 # define RED "\033[0;31m"

@@ -6,16 +6,16 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:19:03 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 14:29:01 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 16:15:09 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MODULE_03_EX02_FLAGTRAP_HPP_
-#define MODULE_03_EX02_FLAGTRAP_HPP_
+#ifndef MODULE_03_EX02_FRAGTRAP_HPP_
+#define MODULE_03_EX02_FRAGTRAP_HPP_
 
-#include "ClapTrap.hpp"
 #include <iostream> /* std::cout */
 #include <string> /* std::string */
+#include "ClapTrap.hpp"
 
 /* COLORS */
 # define RED "\033[0;31m"
@@ -39,4 +39,4 @@ class FragTrap : public ClapTrap {
  private:
 };
 
-#endif /* MODULE_03_EX02_FLAGTRAP_HPP_ */
+#endif /* MODULE_03_EX02_FRAGTRAP_HPP_ */

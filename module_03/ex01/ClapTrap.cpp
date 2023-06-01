@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:40:01 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/01 14:00:13 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/01 16:09:14 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ ClapTrap::~ClapTrap() {
 
 ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
     std::cout << "ClapTrap Assignation operator called" << std::endl;
-    if (this != &rhs)
+    if (this != &rhs) {
         this->_name = rhs._name;
         this->_hitPoints = rhs._hitPoints;
         this->_energyPoints = rhs._energyPoints;
         this->_attackDamage = rhs._attackDamage;
-
+    }
     return (*this);
 }
 
@@ -63,9 +63,9 @@ int ClapTrap::healthCheck(void) {
  * @param target std::string const&: the name of the target
  */
 void ClapTrap::attack(std::string const& target) {
-    if (!this->healthCheck())
-        return ;
-    else {
+    if (!this->healthCheck()) {
+        return;
+    } else {
         std::cout << YELLOW << "ClapTrap " << this->_name << " attack "
             << target << ", causing " << this->_attackDamage
             << " points of damage!" << RESET << std::endl;
@@ -81,7 +81,7 @@ void ClapTrap::attack(std::string const& target) {
  */
 void ClapTrap::takeDamage(unsigned int amount) {
     if (this->healthCheck() == 0) {
-        return ;
+        return;
     } else {
         std::cout << RED << "ClapTrap " << this->_name << " take "
             << amount << " points of damage!" << RESET << std::endl;
@@ -97,9 +97,9 @@ void ClapTrap::takeDamage(unsigned int amount) {
  * @param amount unsigned int: the amount of damage
  */
 void ClapTrap::beRepaired(unsigned int amount) {
-    if (!this->healthCheck())
-        return ;
-    else {
+    if (!this->healthCheck()) {
+        return;
+    } else {
         std::cout << GREEN << "ClapTrap " << this->_name << " be repaired "
             << amount << " points of damage!" << RESET << std::endl;
         setHitPoints(this->_hitPoints + amount);
