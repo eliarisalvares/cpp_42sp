@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 23:06:25 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/14 23:18:51 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/17 19:20:57 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,6 @@
 #include "Brain.hpp"
 
 /* COLORS */
-# define RED "\033[0;31m"
-# define GREEN "\033[0;32m"
-# define YELLOW "\033[0;33m"
-# define BLUE "\033[0;34m"
-# define BLUE_BACKGROUND "\e[44m"
 # define WHITE "\e[1;37m"
 # define RESET "\033[0m"
 
@@ -47,7 +42,7 @@ class AAnimal {
 
  protected:
     std::string _type;
-    
+
 };
 
 #endif  // MODULE_04_EX02_AANIMAL_HPP_

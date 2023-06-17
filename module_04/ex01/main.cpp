@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 22:20:59 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/14 23:03:17 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/17 19:20:38 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,13 +86,39 @@ int main(void)
         std::cout << std::endl;
         std::cout << BLUE << "Cat's brain ideas: " << RESET << std::endl;
         for (int i = 0; i < 101; i++) {
-            std::cout << i << ": " << std::endl;
+            std::cout << YELLOW << i << ": " << RESET;
             cat->getBrain()->getIdeas(i);
         }
 
         std::cout << std::endl;
         std::cout << BLUE << "Deleting the cat:" << RESET << std::endl;
         delete cat;
+    }
+    {
+        std::cout << std::endl;
+        std::cout << RED << "-----------------------------------------"
+            << "Testing deep copy vs shallow copy" << RESET << std::endl;
+        std::cout << BLUE_BACKGROUND << "Creating a Dog and a Cat"
+            << RESET << std::endl;
+        Dog dog;
+		Cat cat;
+
+        std::cout << std::endl;
+        std::cout << BLUE << "Creating a copy of the Dog and the Cat"
+            << RESET << std::endl;
+        Cat catCopy(cat);
+		Dog dogCopy(dog);
+
+        std::cout << std::endl;
+        std::cout << BLUE << "Checking if the copy and the original have the "
+            << "same Brain" << RESET << std::endl;
+        std::cout << "Dog: " << dog.getBrain() << std::endl;
+        std::cout << "Dog2: " << dogCopy.getBrain() << std::endl;
+        std::cout << "Cat: " << cat.getBrain() << std::endl;
+        std::cout << "Cat2: " << catCopy.getBrain() << std::endl;
+
+		std::cout << std::endl;
+        std::cout << BLUE << "Exiting the scope:" << RESET << std::endl;
     }
     return 0;
 }

@@ -6,14 +6,14 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 13:02:07 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/14 21:10:44 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/17 19:19:08 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal(void) {
-    std::cout << WHITE << "New generic WrongAnimal created"
+    std::cout << WHITE << "New WrongAnimal created"
         << RESET << std::endl;
 }
 
@@ -29,8 +29,12 @@ WrongAnimal::WrongAnimal(WrongAnimal const& src) {
 }
 
 WrongAnimal::~WrongAnimal() {
-    std::cout << WHITE << "WrongAnimal " << this->_type << " destroyed"
-        << RESET << std::endl;
+    if (this->_type != "") {
+        std::cout << WHITE << "WrongAnimal of type " << this->_type
+            << " destroyed" << RESET << std::endl;
+	} else {
+        std::cout << WHITE << "WrongAnimal destroyed" << RESET << std::endl;
+	}
 }
 
 WrongAnimal& WrongAnimal::operator=(WrongAnimal const& rhs) {

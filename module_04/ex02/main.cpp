@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 23:25:43 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/14 23:32:53 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/17 19:21:45 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ int main(void)
         std::cout << std::endl;
         std::cout << BLUE << "Cat's brain ideas: " << RESET << std::endl;
         for (int i = 0; i < 101; i++) {
-            std::cout << i << ": " << std::endl;
+            std::cout << YELLOW << i << ": " << RESET;
             cat->getBrain()->getIdeas(i);
         }
 

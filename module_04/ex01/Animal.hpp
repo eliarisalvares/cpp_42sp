@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 21:33:40 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/14 21:40:45 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/17 19:19:41 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@
 #include <string> /* std::string */
 
 /* COLORS */
-# define RED "\033[0;31m"
-# define GREEN "\033[0;32m"
-# define YELLOW "\033[0;33m"
-# define BLUE "\033[0;34m"
-# define BLUE_BACKGROUND "\e[44m"
 # define WHITE "\e[1;37m"
 # define RESET "\033[0m"
 
@@ -49,7 +44,5 @@ class Animal {
  protected:
     std::string _type;
 };
-
-std::ostream& operator<<(std::ostream& os, Animal const& animal);
 
 #endif

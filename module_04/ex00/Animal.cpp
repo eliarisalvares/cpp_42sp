@@ -6,14 +6,14 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:44:38 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/14 20:59:52 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/17 19:18:15 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal(void) {
-    std::cout << WHITE << "New generic Animal created"
+    std::cout << WHITE << "New Animal created"
         << RESET << std::endl;
 }
 
@@ -29,8 +29,12 @@ Animal::Animal(Animal const& src) {
 }
 
 Animal::~Animal() {
-    std::cout << WHITE << "Animal " << this->_type << " destroyed"
-        << RESET << std::endl;
+    if (this->_type != "") {
+        std::cout << WHITE << "Animal of type " << this->_type
+		    << " destroyed" << RESET << std::endl;
+    } else {
+        std::cout << WHITE << "Animal destroyed" << RESET << std::endl;
+    }
 }
 
 Animal& Animal::operator=(Animal const& rhs) {
@@ -52,10 +56,6 @@ void Animal::setType(std::string type) {
 }
 
 void Animal::makeSound(void) const {
-    std::cout << WHITE << "generic Animal sound" << RESET << std::endl;
+    std::cout << WHITE << "Random Animal sound" << RESET << std::endl;
 }
 
-std::ostream& operator<<(std::ostream& os, Animal const& animal) {
-    os << WHITE << "Animal type: " << animal.getType() << RESET << std::endl;
-    return (os);
-}
