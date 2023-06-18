@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 21:06:31 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/17 21:47:54 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/18 00:03:57 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 /* Canonical Functions */
 Form::Form(std::string name, int gradeToSign, int gradeToExecute)
-    : _name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute) {
+    : _name(name), _isSigned(false), _gradeToSign(gradeToSign),
+    _gradeToExecute(gradeToExecute) {
     if (gradeToSign < MAX_GRADE || gradeToExecute < MAX_GRADE) {
         throw Form::GradeTooHighException();
     } else if (gradeToSign > MIN_GRADE || gradeToExecute > MIN_GRADE) {
@@ -25,7 +26,7 @@ Form::Form(std::string name, int gradeToSign, int gradeToExecute)
     }
 }
 
-Form::Form(Form const& src) : _name(src._name),
+Form::Form(Form const& src) : _name(src._name), _isSigned(src._isSigned),
     _gradeToSign(src._gradeToSign), _gradeToExecute(src._gradeToExecute) {
     *this = src;
 }

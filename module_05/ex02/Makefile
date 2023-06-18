@@ -6,12 +6,12 @@
 #    By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/04 19:49:41 by elraira-          #+#    #+#              #
-#    Updated: 2023/06/17 23:15:02 by elraira-         ###   ########.fr        #
+#    Updated: 2023/06/18 00:05:47 by elraira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #name of the executable
-NAME		=	28b
+NAME		=	form28b
 
 #compiler and flags to use when compiling the project (C++98)
 CC			=	c++

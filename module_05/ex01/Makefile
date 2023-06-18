@@ -6,12 +6,12 @@
 #    By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/04 19:49:41 by elraira-          #+#    #+#              #
-#    Updated: 2023/06/17 21:16:05 by elraira-         ###   ########.fr        #
+#    Updated: 2023/06/17 23:58:07 by elraira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #name of the executable
-NAME		=	form
+NAME		=	maggots
 
 #compiler and flags to use when compiling the project (C++98)
 CC			=	c++

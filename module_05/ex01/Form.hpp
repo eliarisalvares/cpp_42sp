@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 20:54:32 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/17 21:21:59 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/17 23:59:01 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,9 @@ class Form {
 
  private:
     const std::string _name;
-    const int _gradeToSign; /* an integer indicating the grade required to sign
-        a form */
-    const int _gradeToExecute; /* an integer indicating the grade required to
-        execute a form */
-    bool _isSigned; /* a boolean indicating whether the form is signed
-        (initially false) */
+    const int _gradeToSign;
+    const int _gradeToExecute;
+    bool _isSigned;
 };
 
 std::ostream& operator<<(std::ostream& os, Form const& rhs);
