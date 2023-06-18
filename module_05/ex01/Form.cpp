@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 21:06:31 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/18 00:03:57 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/18 14:59:17 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 /* Canonical Functions */
 Form::Form(std::string name, int gradeToSign, int gradeToExecute)
-    : _name(name), _isSigned(false), _gradeToSign(gradeToSign),
-    _gradeToExecute(gradeToExecute) {
+    : _name(name), _gradeToSign(gradeToSign),
+    _gradeToExecute(gradeToExecute), _isSigned(false) {
     if (gradeToSign < MAX_GRADE || gradeToExecute < MAX_GRADE) {
         throw Form::GradeTooHighException();
     } else if (gradeToSign > MIN_GRADE || gradeToExecute > MIN_GRADE) {
@@ -26,8 +26,8 @@ Form::Form(std::string name, int gradeToSign, int gradeToExecute)
     }
 }
 
-Form::Form(Form const& src) : _name(src._name), _isSigned(src._isSigned),
-    _gradeToSign(src._gradeToSign), _gradeToExecute(src._gradeToExecute) {
+Form::Form(Form const& src) : _name(src._name), _gradeToSign(src._gradeToSign),
+    _gradeToExecute(src._gradeToExecute), _isSigned(src._isSigned) {
     *this = src;
 }
 
@@ -65,8 +65,6 @@ void Form::beSigned(Bureaucrat const& bureaucrat) {
         throw Form::GradeTooLowException();
     } else {
         this->_isSigned = true;
-        std::cout << GREEN << "Bureaucrat " << bureaucrat.getName()
-            << " signed the form " << this->_name << "." << RESET << std::endl;
     }
 }
 
@@ -81,7 +79,7 @@ const char* Form::GradeTooLowException::what() const throw() {
 
 /* Overloaders */
 std::ostream& operator<<(std::ostream& os, Form const& form) {
-    os << WHITE << "Form " << form.getName() << " is "
+    os << BLUE << "Form " << form.getName() << " is "
         << (form.getIsSigned() ? "signed" : "not signed")
         << " and requires grade " << form.getGradeToSign()
         << " to be signed and grade " << form.getGradeToExecute()

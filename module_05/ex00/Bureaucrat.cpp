@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 19:35:00 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/17 21:53:46 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/18 14:58:30 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int Bureaucrat::incrementGrade(void) {
     } else {
         this->_grade--;
         std::cout << RED << "Bureaucrat " << this->_name
-            << " has been demoted to grade "
+            << " has been promoted to grade "
             << this->_grade << "." << RESET << std::endl;
     }
     return (this->_grade);
@@ -66,7 +66,7 @@ int Bureaucrat::decrementGrade(void) {
     } else {
         this->_grade++;
         std::cout << GREEN << "Bureaucrat " << this->_name
-            << " has been promoted to grade "
+            << " has been demoed to grade "
             << this->_grade << "." << RESET << std::endl;
     }
     return (this->_grade);

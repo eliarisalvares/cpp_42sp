@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 22:44:31 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/17 23:27:37 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/18 15:01:29 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat& executor) const {
     std::stringstream ss;
 
     ss << this->_target << "_shrubbery";
-    file.open(ss.str());
+    file.open(ss.str().c_str());
     if (!file.is_open()) {
         throw ShrubberyCreationForm::FileNotOpenException();
     }

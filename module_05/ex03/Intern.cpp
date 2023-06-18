@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 23:34:03 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/17 23:53:59 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/18 15:02:20 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,3 @@ AForm* Intern::makeForm(std::string const& name, std::string const& target) {
 const char* Intern::FormNotCreated::what() const throw() {
     return ("form was not created.");
 }
-
-
-
-

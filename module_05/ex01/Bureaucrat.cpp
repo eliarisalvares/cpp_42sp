@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 19:35:00 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/17 21:47:07 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/18 14:58:59 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int Bureaucrat::incrementGrade(void) {
     } else {
         this->_grade--;
         std::cout << RED << "Bureaucrat " << this->_name
-            << " has been demoted to grade "
+            << " has been promoted to grade "
             << this->_grade << "." << RESET << std::endl;
     }
     return (this->_grade);
@@ -68,7 +68,7 @@ int Bureaucrat::decrementGrade(void) {
     } else {
         this->_grade++;
         std::cout << GREEN << "Bureaucrat " << this->_name
-            << " has been promoted to grade "
+            << " has been demoed to grade "
             << this->_grade << "." << RESET << std::endl;
     }
     return (this->_grade);
@@ -93,10 +93,10 @@ std::ostream& operator<<(std::ostream& os, Bureaucrat const& bureaucrat) {
 void Bureaucrat::signForm(Form& form) {
     try {
         form.beSigned(*this);
-        std::cout << GREEN << this->_name << " signs " << form.getName()
+        std::cout << GREEN << this->_name << " signed " << form.getName()
             << "." << RESET << std::endl;
     } catch (std::exception& e) {
-        std::cout << RED << this->_name << " cannot sign " << form.getName()
+        std::cout << RED << this->_name << " couldn't sign " << form.getName()
             << " because " << e.what() << RESET << std::endl;
     }
 }

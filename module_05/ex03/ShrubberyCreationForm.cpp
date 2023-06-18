@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 22:44:31 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/17 23:27:37 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/18 15:04:00 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,13 @@ const char* ShrubberyCreationForm::FileNotWriteException::what() const throw() {
     return ("File could not be written.");
 }
 
-
 /* Other Functions */
 void ShrubberyCreationForm::execute(const Bureaucrat& executor) const {
     std::ofstream file;
     std::stringstream ss;
 
     ss << this->_target << "_shrubbery";
-    file.open(ss.str());
+    file.open(ss.str().c_str());
     if (!file.is_open()) {
         throw ShrubberyCreationForm::FileNotOpenException();
     }
