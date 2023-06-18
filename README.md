@@ -10,5 +10,5 @@ projetos e de uma metodologia de auto-estudo e cooperação entre pares.
 
 Esse projeto é uma piscina de programação em C++ que tem como objetivo
 apresentar os conceitos básicos da linguagem C++ e da orientação a objetos
-através de 9 listas de exercícios (módulos).
+através de 10 listas de exercícios (módulos).
 
