@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 23:44:41 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/21 21:53:28 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/21 22:15:46 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 #include <iostream> /* cout, endl */
 #include <string> /* string */
 #include <iomanip> /* setprecision */
+
+/* COLORS */
+# define RESET "\033[0m"
+# define BLUE "\033[0;34m"
 
 struct Data {
     std::string s1;
