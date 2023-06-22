@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:32:47 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/21 22:15:19 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/22 13:11:17 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,15 @@ int main() {
     std::cout << "n: " << ptr2->n << std::endl;
 
     std::cout << std::endl << BLUE << "Compare:" << RESET << std::endl;
-    std::cout << "s1: " << (ptr->s1 == ptr2->s1 ? GREEN : RED) << ptr->s1
-        << RESET << std::endl;
-    std::cout << "s2: " << (ptr->s2 == ptr2->s2 ? GREEN : RED) << ptr->s2
-        << RESET << std::endl;
-    std::cout << "n: " << (ptr->n == ptr2->n ? GREEN : RED) << ptr->n
-        << RESET << std::endl;
+    std::cout << "s1: " << (ptr->s1 == ptr2->s1 ? GREEN : RED)
+        << "If I'm green, it's because I'm the same string."
+		<< RESET << std::endl;
+    std::cout << "s2: " << (ptr->s2 == ptr2->s2 ? GREEN : RED)
+        << "If I'm green, it's because I'm the same string."
+		<< RESET << std::endl;
+    std::cout << "n: " << (ptr->n == ptr2->n ? GREEN : RED) <<
+        "If I'm green, it's because I'm the same number."
+		<< RESET << std::endl;
 
     std::cout << std::endl << BLUE << "End of serialization." << RESET
         << std::endl;
