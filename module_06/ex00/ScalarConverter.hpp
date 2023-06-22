@@ -6,17 +6,17 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 10:28:43 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/21 00:56:50 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/21 21:53:37 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MODULE_06_EX00_SCALARCONVERTER_HPP
-#define MODULE_06_EX00_SCALARCONVERTER_HPP
+#ifndef MODULE_06_EX00_SCALARCONVERTER_HPP_
+#define MODULE_06_EX00_SCALARCONVERTER_HPP_
 
+#include <stdlib.h> /* atof */
 #include <iostream> /* cout, endl */
 #include <string> /* string */
 #include <iomanip> /* setprecision */
-#include <stdlib.h> /* atof */
 
 /* COLOR CODES */
 #define RESET "\033[0m"
@@ -25,8 +25,7 @@
 #define YELLOW "\033[33m"
 
 /* TYPE ENUM */
-typedef enum e_type
-{
+typedef enum e_type {
     CHAR,
     INT,
     FLOAT,
@@ -41,7 +40,6 @@ class ScalarConverter {
     static void convert(std::string literals);
 
  private:
-
     /* Canonical Functions */
     ScalarConverter();
     ScalarConverter(ScalarConverter const &src);
@@ -63,4 +61,4 @@ class ScalarConverter {
     static int checkImpossible();
 };
 
-#endif //MODULE_06_EX00_SCALARCONVERTER_HPP
+#endif  // MODULE_06_EX00_SCALARCONVERTER_HPP_

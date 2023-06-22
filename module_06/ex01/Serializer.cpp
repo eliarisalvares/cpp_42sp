@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 00:57:20 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/21 20:36:16 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/21 21:25:19 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,24 @@ Serializer &Serializer::operator=(Serializer const &rhs) {
     return (*this);
 }
 
+/**
+ * @brief This function will take a pointer to the Data structure and return a
+ * uintptr_t that contains the address of the Data structure.
+ *
+ * @param ptr pointer to the Data structure.
+ * @return uintptr_t that contains the address of the Data structure.
+ */
 uintptr_t Serializer::serialize(Data* ptr) {
     return reinterpret_cast<uintptr_t>(ptr);
 }
 
+/**
+ * @brief This function will take uintptr_t that contains the address of the
+ * Data structure and return a pointer to the Data structure.
+ *
+ * @param raw uintptr_t that contains the address of the Data structure.
+ * @return Data* pointer to the Data structure.
+ */
 Data* Serializer::deserialize(uintptr_t raw) {
     return reinterpret_cast<Data*>(raw);
 }

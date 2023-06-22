@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 10:28:43 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/21 00:54:53 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/21 21:50:25 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 /* Attributes */
 std::string ScalarConverter::_literal = "";
-t_type ScalarConverter::_type = INVALID;
 
 /* Canonical Functions */
 /**
@@ -148,17 +147,17 @@ e_type ScalarConverter::getType(std::string literal) {
     bool hasDecimalPoint = false;
     bool hasFSuffix = false;
 
-    if (literal.length() == 0)
+    if (literal.length() == 0) {
         return INVALID;
-    if (isDoubleLiteral(literal))
+    } else if (isDoubleLiteral(literal)) {
         return DOUBLE;
-    if (isFloatLiteral(literal))
+    } else if (isFloatLiteral(literal)) {
         return FLOAT;
-    else if (isCharacterLiteral(literal)) {
+    } else if (isCharacterLiteral(literal)) {
         return CHAR;
     }
 
-    for (int a = 0; a < (int )literal.length(); a++) {
+    for (int a = 0; a < (int)literal.length(); a++) {
         checkCharacters(literal[a], isNumericCharacter,
             hasDecimalPoint, hasFSuffix);
     }

@@ -6,23 +6,20 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:32:47 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/21 20:39:41 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/21 21:51:09 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serializer.hpp"
 
-#include "Serializer.hpp"
-
-int main()
-{
+int main() {
     Data *ptr = new Data;
     uintptr_t tmp;
     Data *ptr2;
 
     ptr->s1 = "hello";
     ptr->s2 = "world";
-    ptr->n = 2024;
+    ptr->n = 42;
 
     tmp = Serializer::serialize(ptr);
 
