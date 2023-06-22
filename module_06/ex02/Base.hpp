@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:50:04 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/21 21:54:30 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/21 22:18:00 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 #include <iostream> /* cout, endl */
 #include <cstdlib> /* srand, rand */
+
+/* COLORS */
+# define RESET "\033[0m"
+# define PURPLE "\033[0;35m"
 
 /* BASE CLASS */
 class Base {

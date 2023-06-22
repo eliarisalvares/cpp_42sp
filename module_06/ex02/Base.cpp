@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:53:53 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/21 21:59:39 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/21 22:29:45 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,22 +94,24 @@ void identify(Base& p) {
     try {
         std::cout << "A" << std::endl;
         tmp = dynamic_cast<A&>(p);
-        std::cout << "Success" << std::endl;
+        std::cout << "It's an A" << std::endl;
     } catch (std::exception &e) {
-        std::cout << "Fail" << std::endl;
+        std::cout << "Not an A" << std::endl;
     }
     try {
         std::cout << "B" << std::endl;
         tmp = dynamic_cast<B&>(p);
-        std::cout << "Success" << std::endl;
+        std::cout << "It's a B" << std::endl;
     } catch (std::exception &e) {
-        std::cout << "Fail" << std::endl;
+        std::cout << "Not a B" << std::endl;
     }
     try {
         std::cout << "C" << std::endl;
         tmp = dynamic_cast<C&>(p);
-        std::cout << "Success" << std::endl;
+        std::cout << "It's a C" << std::endl;
     } catch (std::exception &e) {
-        std::cout << "Fail" << std::endl;
+        std::cout << "Not a C" << std::endl;
     }
+    std::cout << std::endl;
+    std::cout << "End of tmp scope:" << std::endl;
 }
