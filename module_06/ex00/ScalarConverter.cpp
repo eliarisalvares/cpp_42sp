@@ -6,7 +6,7 @@
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 10:28:43 by elraira-          #+#    #+#             */
-/*   Updated: 2023/06/21 21:50:25 by elraira-         ###   ########.fr       */
+/*   Updated: 2023/06/22 13:04:00 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,28 +193,28 @@ void ScalarConverter::convert(std::string literal) {
         }
     } else if (type == INT) {
         try {
-            printInt(std::stoi(literal));
-            printChar(static_cast<char>(std::stoi(literal)));
-            printFloat(static_cast<float>(std::stoi(literal)));
-            printDouble(static_cast<double>(std::stoi(literal)));
+            printInt(atoi(literal.c_str()));
+            printChar(static_cast<char>(atoi(literal.c_str())));
+            printFloat(static_cast<float>(atoi(literal.c_str())));
+            printDouble(static_cast<double>(atoi(literal.c_str())));
         } catch (std::exception &e) {
             std::cout << RED << e.what() << RESET << std::endl;
         }
     } else if (type == FLOAT) {
         try {
-            printFloat(std::stof(literal));
-            printDouble(static_cast<double>(std::stof(literal)));
-            printInt(static_cast<int>(std::stof(literal)));
-            printChar(static_cast<char>(std::stof(literal)));
+            printFloat(strtof(literal.c_str(), NULL));
+            printDouble(static_cast<double>(strtof(literal.c_str(), NULL)));
+            printInt(static_cast<int>(strtof(literal.c_str(), NULL)));
+            printChar(static_cast<char>(strtof(literal.c_str(), NULL)));
         } catch (std::exception &e) {
             std::cout << RED << e.what() << RESET << std::endl;
         }
     } else if (type == DOUBLE) {
         try {
-            printDouble(std::stod(literal));
-            printFloat(static_cast<float>(std::stod(literal)));
-            printInt(static_cast<int>(std::stod(literal)));
-            printChar(static_cast<char>(std::stod(literal)));
+            printDouble(strtod(literal.c_str(), NULL));
+            printFloat(static_cast<float>(strtod(literal.c_str(), NULL)));
+            printInt(static_cast<int>(strtod(literal.c_str(), NULL)));
+            printChar(static_cast<char>(strtod(literal.c_str(), NULL)));
         } catch (std::exception &e) {
             std::cout << RED << e.what() << RESET << std::endl;
         }
