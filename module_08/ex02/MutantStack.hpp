@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eliarisalvares <eliarisalvares@student.    +#+  +:+       +#+        */
+/*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 23:38:09 by eliarisalva       #+#    #+#             */
-/*   Updated: 2023/06/29 16:03:09 by eliarisalva      ###   ########.fr       */
+/*   Updated: 2023/07/04 20:46:12 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
