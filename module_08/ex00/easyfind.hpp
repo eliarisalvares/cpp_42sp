@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eliarisalvares <eliarisalvares@student.    +#+  +:+       +#+        */
+/*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:12:14 by eliarisalva       #+#    #+#             */
-/*   Updated: 2023/06/28 22:11:27 by eliarisalva      ###   ########.fr       */
+/*   Updated: 2023/07/04 21:55:20 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@
 #include <iterator>  /* begin, end */
 #include <string>    /* string */
 #include <vector>    /* vector */
+#include <list>      /* list */
 
 /* COLORS */
 # define RESET "\033[0m"
 # define BLUE "\033[1;34m"
 # define RED "\033[1;31m"
+# define PURPLE "\033[1;35m"
 
 /**
  * @brief This function receives a container and a value to find in the container.
@@ -31,7 +33,7 @@
  * supported as elements. The container manages the storage space for its elements and
  * provides member functions to access them, either directly or through iterators, which
  * are references to elements of the container.
- * 
+ *
  * @tparam T template type
  * @param container the container to search
  * @param value the value to find
