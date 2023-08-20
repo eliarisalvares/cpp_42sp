@@ -1,54 +1,68 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PmergeMe.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/19 20:21:25 by elraira-          #+#    #+#             */
+/*   Updated: 2023/08/20 01:54:33 by elraira-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PmergeMe.hpp"
 
-PmergeMe::PmergeMe() {}
+/* CANONICAL FORM */
 
-PmergeMe::PmergeMe(const PmergeMe& rhs) {
-    *this = rhs;
+/**
+ * @brief Construct a new PmergeMe:: PmergeMe object
+ *
+ */
+PmergeMe::PmergeMe(void) {
 }
 
-PmergeMe& PmergeMe::operator=(const PmergeMe& rhs) {
-    this->vec = rhs.vec;
-    this->deq = rhs.deq;
-    return *this;
+/**
+ * @brief Construct a new PmergeMe:: PmergeMe object by copy
+ *
+ * @param rhs the object to be copied, right hand side
+ */
+PmergeMe::PmergeMe(const PmergeMe &rhs) {
+  (void)rhs;
 }
 
-PmergeMe::~PmergeMe() {}
-
-bool PmergeMe::isValidArg(char* arg) {
-    std::string str = arg;
-
-    if ((!str.empty() && str.find_first_not_of("0123456789") != std::string::npos) ||
-        (atoi(arg) > INT_MAX)) {
-        std::cout << "Error" << std::endl;
-        return false;
-    }
-    return true;
+/**
+ * @brief Destroy the Pmerge Me:: Pmerge Me object
+ *
+ */
+PmergeMe::~PmergeMe(void) {
 }
 
-void PmergeMe::fillContainer(char* arg) {
-    vec.push_back(atoi(arg));
-    deq.push_back(atoi(arg));
+/**
+ * @brief assignment operator overload
+ *
+ * @param rhs the object to be copied, right hand side
+ * @return PmergeMe& the new object
+ */
+PmergeMe &PmergeMe::operator=(const PmergeMe &rhs) {
+  (void)rhs;
+  return (*this);
 }
 
-void PmergeMe::printOutput(char** arg) {
-    double durationVec = ((double)(endVec - sttVec)) / CLOCKS_PER_SEC * 1000.0;
-    double durationDeq = ((double)(endDeq - sttDeq)) / CLOCKS_PER_SEC * 1000.0;
-
-    std::cout << "Before -> ";
-    for (int i = 1; arg[i]; i++) {
-        std::cout << arg[i] << ' ';
-    }
-    std::cout << std::endl;
-
-    std::cout << "After -> ";
-    for (size_t i = 0; i != vec.size(); i++) {
-        std::cout << vec[i] << ' ';
-    }
-    std::cout << std::endl;
-
-    std::cout << "Time to process a range of " << vec.size() << " elements with std::vector -> "
-              << durationVec << " ms" << std::endl;
-
-    std::cout << "Time to process a range of " << deq.size() << " elements with std::deque -> "
-              << durationDeq << " ms" << std::endl;
+/**
+ * @brief recursive function that gets the nth jacobsthal term.
+ * n = 0 and n = 1 are the base cases. The nth term is calculated
+ * by using the relation of the jacobsthal sequence. which is the sum
+ * of the previous two terms.
+ *
+ * @param n the term to be calculated.
+ * @return int the nth jacobsthal term.
+ */
+int PmergeMe::getJacobsthalTerm(int n) {
+  if (n == 0) {
+    return (0);
+  }
+  if (n == 1) {
+    return (1);
+  }
+  return (getJacobsthalTerm(n - 1) + 2 * getJacobsthalTerm(n - 2));
 }

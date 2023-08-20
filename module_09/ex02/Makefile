@@ -6,12 +6,12 @@
 #    By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/04 19:49:41 by elraira-          #+#    #+#              #
-#    Updated: 2023/08/05 22:05:57 by elraira-         ###   ########.fr        #
+#    Updated: 2023/08/20 00:58:52 by elraira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #name of the executable
-NAME		=	easyfind
+NAME		=	PmergeMe
 
 #compiler and flags to use when compiling the project (C++98)
 CC			=	c++
@@ -23,8 +23,11 @@ RM			=	rm -f
 #path to the object files
 OBJ_PATH	=	./obj/
 
+# header files
+HDRS		=	PmergeMe.hpp
+
 #source files
-SRCS		=	main.cpp PmergeMe.cpp
+SRCS		=	main.cpp PmergeMe.cpp deque.cpp vector.cpp
 
 #object files
 OBJS		=	$(SRCS:%.cpp=%.o)
@@ -34,7 +37,7 @@ all:		$(NAME)
 
 #add folder prefix to object files and compile
 $(NAME):	$(addprefix $(OBJ_PATH), $(OBJS))
-	$(CC) $(CFLAGS) -o $(NAME) $(addprefix $(OBJ_PATH), $(OBJS))
+	$(CC) $(CFLAGS) -I $(HDRS) $^ -o $@
 
 #compile source files to object files, creating the folder if necessary
 $(OBJ_PATH)%.o: %.cpp

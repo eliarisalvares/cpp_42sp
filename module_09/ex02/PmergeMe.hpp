@@ -5,135 +5,299 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: elraira- <elraira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 19:18:36 by elraira-          #+#    #+#             */
-/*   Updated: 2023/08/05 22:19:02 by elraira-         ###   ########.fr       */
+/*   Created: 2023/08/19 23:39:54 by elraira-          #+#    #+#             */
+/*   Updated: 2023/08/20 14:41:59 by elraira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MODULE_09_EX02_PMERGEME_HPP_
 #define MODULE_09_EX02_PMERGEME_HPP_
 
-#include <iostream>    // std::cout, std::endl
-#include <iostream>   // std::cout, std::endl
-#include <deque>     // std::deque
-#include <vector>   // std::vector
-#include <climits> // INT_MAX
-#include <ctime>  // clock_t, clock, CLOCKS_PER_SEC
-#include <cstdlib> // srand, rand
+/* INCLUDES */
+#include <algorithm> // std::sort
+#include <deque> // std::deque
+#include <iterator> // std::ostream_iterator
+#include <sys/types.h> // uint
+#include <utility> // std::pair
+#include <vector> // std::vector
+#include <iomanip> // std::setw
+#include <iostream> // std::cout, std::endl
+#include <sstream> // std::stringstream
+#include <string> // std::string
 
-/**
- * @brief A class that performs parallel merge and insertion sort operations on containers.
- */
+/* COLORS */
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define BLUE "\033[34m"
+
 class PmergeMe {
-public:
-    /**
-     * @brief Default constructor for PmergeMe.
-     */
-    PmergeMe();
+ public:
+    /* MAIN METHODS */
+    static void sortVector(std::vector<uint> &arr);
+    static void sortDeque(std::deque<uint> &arr);
 
+    /* TEMPLATE */
     /**
-     * @brief Copy constructor for PmergeMe.
-     * @param rhs The PmergeMe instance to copy from.
+     * @brief Checks if a sequence is sorted in ascending order.
+     * @tparam T The type of the sequence.
+     * @param sequence The sequence to check.
+     * @return true if the sequence is sorted, false otherwise.
      */
-    PmergeMe(const PmergeMe& rhs);
+    template <typename T>
+    static bool isSorted(const T &sequence) {
+        for (typename T::const_iterator current = sequence.begin();
+            current != sequence.end(); ++current) {
+            typename T::const_iterator next = current + 1;
+            if (next == sequence.end()) {
+                break;
+            }
+            if (*next < *current) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-    /**
-     * @brief Assignment operator for PmergeMe.
-     * @param rhs The PmergeMe instance to assign from.
-     * @return Reference to the assigned PmergeMe instance.
-     */
-    PmergeMe& operator=(const PmergeMe& rhs);
+ private:
+    /* CANONICAL */
+    PmergeMe(void);
+    PmergeMe(const PmergeMe &other);
+    ~PmergeMe(void);
+    PmergeMe &operator=(const PmergeMe &other);
 
-    /**
-     * @brief Destructor for PmergeMe.
-     */
-    ~PmergeMe();
+    /* VECTOR */
+    static std::vector<std::pair<uint, uint> > makePairs(std::vector<uint> &a);
+    static std::vector<uint>
+    extractLargestElement(std::vector<std::pair<uint, uint> > &pairs);
+    static std::vector<uint>
+    extractSmallerElement(std::vector<std::pair<uint, uint> > &pairs);
 
-    /**
-     * @brief Fill the container with data based on the provided argument.
-     * @param arg The argument to determine data filling.
-     */
-    void fillContainer(char* arg);
+    /* DEQUE */
+    static std::deque<std::pair<uint, uint> > makePairs(std::deque<uint> &a);
+    static std::deque<uint>
+    extractLargestElement(std::deque<std::pair<uint, uint> > &pairs);
+    static std::deque<uint>
+    extractSmallerElement(std::deque<std::pair<uint, uint> > &pairs);
 
-    /**
-     * @brief Check if the argument is valid.
-     * @param arg The argument to validate.
-     * @return true if the argument is valid, false otherwise.
-     */
-    bool isValidArg(char* arg);
+    /* UTILS */
+    static int getJacobsthalTerm(int n);
+    // static void printVector(std::vector<std::pair<uint, uint> > &arr);
 
+    /* TEMPLATE */
     /**
-     * @brief Print the output based on the provided argument.
-     * @param arg The argument to determine output printing.
+     * @brief Sorts pairs in a given container.
+     * @param arr The container of pairs to be sorted.
      */
-    void printOutput(char** arg);
+    template <typename T>
+    static void sortPairs(T &arr) {
+        typename T::iterator it;
 
-    /**
-     * @brief Sort the elements within a specified range using merge and insertion sort.
-     * @tparam T The type of the container.
-     * @param container The container to be sorted.
-     * @param begin The starting index of the range to be sorted.
-     * @param end The ending index of the range to be sorted.
-     */
-    template <class T>
-    void sort(T& container, int begin, int end) {
-        if (begin < end) {
-            int mid = (begin + end) / 2;
-            sort(container, begin, mid);
-            sort(container, mid + 1, end);
-            mergeInsertionSort(container, begin, mid, end);
+        for (it = arr.begin(); it != arr.end(); it++) {
+            if (it->first > it->second) {
+                std::swap(it->first, it->second);
+            }
         }
     }
 
-    std::vector<unsigned long int> vec;
-    std::deque<unsigned long int> deq;
-    clock_t sttVec;
-    clock_t endVec;
-    clock_t sttDeq;
-    clock_t endDeq;
-
     /**
-     * @brief Perform merge and insertion sort on a specific range of the container.
+     * @brief Sorts a given container by the largest value using insertion sort.
      * @tparam T The type of the container.
      * @param container The container to be sorted.
-     * @param left The starting index of the left subarray.
-     * @param mid The ending index of the left subarray and the starting index of the right subarray.
-     * @param right The ending index of the right subarray.
+     * @param size The size of the container.
      */
-    template <class T>
-    void mergeInsertionSort(T& container, int left, int mid, int right) {
-        std::vector<int> temp(right - left + 1);
-        int i = left;
-        int j = mid + 1;
-        int k = 0;
+    template <typename T>
+    static void insertionSort(T &container, size_t size) {
+        if (size <= 1) {
+            return;
+        }
 
-        while (i <= mid && j <= right) {
-            if (container[i] < container[j]) {
-                temp[k] = container[i];
-                ++i;
+        int index = size - 2;
+        std::pair<uint, uint> lastElement = container[size - 1];
+
+        insertionSort(container, size - 1);
+
+        while (index >= 0 && container[index].second > lastElement.second) {
+            container[index + 1] = container[index];
+            index--;
+        }
+        container[index + 1] = lastElement;
+    }
+
+    /**
+     * @brief Reinserts the last element into a given container.
+     * @tparam T The type of the container.
+     * @param container The input container.
+     * @param lastElement A pointer to the last element to be reinserted.
+     */
+    template <typename T>
+    static void reinsertLastElement(T &container, uint *lastElement) {
+        typename T::iterator position;
+
+        if (lastElement != nullptr) {
+            position = getTargetPosition(container.begin(), container.end(),
+                *lastElement);
+            container.insert(position, *lastElement);
+        }
+    }
+
+/**
+ * @brief Creates a Jacobsthal chain from a given pending chain.
+ * @tparam T The type of the container.
+ * @param pendingChain The input pending chain.
+ * @return The Jacobsthal chain created from the input pending chain.
+ */
+template <typename T>
+static T createJacobsthalChain(T &pendingChain) {
+    int index;
+    size_t size;
+    size_t jacobsthalIndex;
+    T jacobsthalChain;
+
+    if (pendingChain.empty()) {
+        return jacobsthalChain;
+    }
+
+    index = 3;
+    size = pendingChain.size();
+
+    while ((jacobsthalIndex = getJacobsthalTerm(index)) < size) {
+        // std::cout << "Adding " << jacobsthalIndex << " to Jacobsthal chain." << std::endl;
+        jacobsthalChain.push_back(jacobsthalIndex);
+        index++;
+    }
+    jacobsthalChain.push_back(size);
+
+    return jacobsthalChain;
+}
+
+/**
+ * @brief Creates an index sequence from a given Jacobsthal chain and
+ * pending chain.
+ * @param jacobsthalChain The input Jacobsthal chain.
+ * @param pendingChain The input pending chain.
+ * @return The index chain created from the input Jacobsthal and pending
+ * chains.
+ */
+template <typename T>
+static T createIndexChain(T &jacobsthalChain, T &pendingChain) {
+    T indexChain(1, 0);
+    size_t index = 1;
+    size_t lastIndex = 1;
+    typename T::iterator it;
+
+    if (pendingChain.empty()) {
+        return indexChain;
+    }
+
+    /* std::cout << "Jacobsthal chain: ";
+    for (typename T::iterator jt = jacobsthalChain.begin(); jt != jacobsthalChain.end(); jt++) {
+        std::cout << *jt << " ";
+    }
+    std::cout << std::endl; */
+
+    // Iterate through the Jacobsthal chain.
+    for (it = jacobsthalChain.begin(); it != jacobsthalChain.end(); it++) {
+        index = *it;
+        size_t pos = index;
+
+        // Loop to add index positions to the index chain.
+        while (pos > lastIndex) {
+            // std::cout << "Adding " << (pos - 1) << " to index chain." << std::endl;
+            indexChain.push_back(pos - 1);
+            pos--;
+        }
+        lastIndex = index;
+    }
+
+    return indexChain;
+}
+
+    /**
+     * @brief Finds the position of a target value in a given range.
+     * @param begin The beginning of the range to search in.
+     * @param end The end of the range to search in.
+     * @param target The target value to search for.
+     * @return An iterator pointing to the position of the target value in
+     * the range.
+     */
+    template <typename T>
+    static T getTargetPosition(T begin, T end, uint target) {
+        T low, high;
+
+        low = begin;
+        high = end;
+        while (low < high) {
+            T mid = low + (high - low) / 2;
+            if (*mid < target) {
+                low = mid + 1;
             } else {
-                temp[k] = container[j];
-                ++j;
+                high = mid;
             }
-            ++k;
         }
+        return low;
+    }
 
-        while (i <= mid) {
-            temp[k] = container[i];
-            ++i;
-            ++k;
-        }
+    /**
+     * @brief Fills the main chain with values from the index and pending
+     * chains.
+     * @param mainChain The main chain to be filled.
+     * @param indexChain The index chain to use for filling the main chain.
+     * @param pendingChain The pending chain to use for filling the main
+     * chain.
+     */
+    template <typename T>
+    static void fillMainChain(T &mainChain, T &indexChain, T &pendingChain) {
+        uint target;
+        uint count;
+        typename T::iterator it;
+        typename T::iterator targetPosition;
 
-        while (j <= right) {
-            temp[k] = container[j];
-            ++j;
-            ++k;
-        }
-
-        for (int y = 0; y < k; ++y) {
-            container[left + y] = temp[y];
+        count = 0;
+        for (it = indexChain.begin(); it != indexChain.end(); it++) {
+            target = pendingChain.at(*it);
+            targetPosition = getTargetPosition(mainChain.begin(),
+                                mainChain.begin() + *it + 1 + count, target);
+            mainChain.insert(targetPosition, target);
+            count++;
         }
     }
 };
 
-#endif  // MODULE_09_EX02_PMERGEME_HPP_
+/**
+ * @brief Converts a sequence to a string.
+ */
+template <typename T>
+std::string convertToString(T &sequence) {
+    std::stringstream ss;
+    for (typename T::const_iterator it = sequence.begin();
+        it != sequence.end(); ++it) {
+        ss << *it;
+        if (it + 1 != sequence.end()) {
+            ss << " ";
+        }
+    }
+    return ss.str();
+}
+
+/**
+ * @brief Prints the output of the sorting algorithm including the time it
+ * took to sort the sequence.
+ */
+template <typename T>
+void printOutput(const std::string &container, T &sequence, void (*func)(T &)) {
+    std::cout << BLUE << "Before: " << RESET
+        << convertToString(sequence) << RESET << std::endl;
+    clock_t begin = clock();
+    func(sequence);
+    clock_t end = clock();
+    double duration = ((double)(end - begin) / CLOCKS_PER_SEC * 1000000.0);
+
+    std::cout << BLUE << "After:  " << RESET
+        << convertToString(sequence) << RESET << std::endl;
+    std::cout << BLUE << "Time to sort an array of " << RESET
+        << sequence.size() << BLUE << " elements using " << RESET
+        << container << BLUE << ": " << RESET
+        << duration << "us" << std::endl << std::endl;
+}
+
+#endif // MODULE_09_EX02_PMERGE_ME_HPP_
